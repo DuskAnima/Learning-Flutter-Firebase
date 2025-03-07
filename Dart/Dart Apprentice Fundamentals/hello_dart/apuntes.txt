@@ -1,6 +1,7 @@
 >En Dart TODO es un objeto. Incluso si int, str, double o num parecen Primitive Datatypes, son objetos, lo que
 significa que pueden ser tratados como tal; es posible aplicarles directamente métodos.
 
+
 >El Type Safety hará que se genere un error si tratas de redefinir una variable si el datatype es erroneo.
     >Si no quieres que el Type Safety se ponga en medio, siempre es posible usar el Datatype "dynamic", pero
     esto no suele ser buena idea: "Friends don’t let friends use dynamic . Your life is too valuable for that."
@@ -9,3 +10,80 @@ significa que pueden ser tratados como tal; es posible aplicarles directamente m
 el datatype correcto para esta situación, pero esto no excluye el Type Safety; si es asignado un datatype,
 este no puede ser alterado al intentar redefinir la variable.
  
+>const y final son dos maneras de declarar constantes. 
+    >const
+        >Solo es usado para "compile-time constant", es decir, un valor que está declarado en el compilador 
+        *antes* de que el programa sea ejecutado.
+        >La ventaja de usarlo es que da al compilador la libertad de hacer optimizaciones internas antes 
+        de compilar el programa  
+    >final
+        >Es usado para "runtime constant", es decir, un valor que se declara durante la ejecusión del programa,
+        cuando requieres una constante pero aun no puedes saber el valor de esa variable previamente, entonces
+        no es posible declararla.
+        >Un ejemplo de uso es cuando debes hacer fetch a valores de un server, consultar la configuración de un
+        dispositivo, establecer un timestamp con la hora actual o pedirle a un usuario información inmutable.
+    >Ambas poseen Type Inference.
+    >Tras ser declaradas, su valor no puede ser declarado otra vez, de intentarse, generará un error.
+
+>DEBES HACER NOMBRES DESCRIPTIVOS Y SIGNIFICATIVOS PARA LAS VARIABLES, SIN USAR LETRAS NI ABREVIACIONES.
+    >Debes poder leer el código y comprender el significado de las cosas que ocurren a medida que lo lees, 
+    evitando tener que depender de la memoria. 
+
+----------------------------------------------------------------------------------------------
+> Datatypes:
+    >Los Datatypes son objetos (como todo en Dart)
+        >Por lo tanto, son una subclase/subtipo de Object
+            >Object define algunas core operations, como por ejemplo pruebas de equidad o autodescripción.
+            >Cada non-nullable type es un subtipo de objecto, por lo tanto comparte las funcionalidades básicas
+            de Object. 
+    >Lista de Datatypes:
+        >Object?: objeto generalizado, similar a dynamic, pero hace un checking en el runtime.
+        >int: números enteros.
+        >double: números flotantes.
+        >num: numéricos (incluye int y double).
+        >dynamic: tipo dinámico (no recomendable, compromete la fiabilidad de la data).
+            >es el datatype por defecto si inicializas una variable "var" sin un valor. 
+        >String: cadena de texto (si, en mayúscula).
+    >Type Cheking en runtime:
+        >si se usa la keyword "is" se usa luego de instanciar una variable y luego declarar un datatype, se retornará true o false
+        si es que el datatype declarado se condice con el datatype de la variable instanciada.
+            > Esto se puede utilizar para hacer un checking en el control de flujos, por ejemplo o para debugging.
+            >ejemplo: num myNumber = 3.14;
+            print(myNumber is int); : false
+            print(myNumber is double); : true
+        >Si se usa la propiedad ".runtimeType" en la misma instancia de variable, retornará el datatype correspondiente.
+    >Type Conversion:
+        >Las Conversiones implícitas son fuente de bugs y pérdida de rendimiento en lenguajes de programación con 
+        esta característica, es por esto que Dart no las permite. 
+        >En Dart, para hacer un type conversion es necesario explicitarlo usando métodos de clase:
+            >toInt() : convierte de double a integer, esto implica la pérdida de decimales.
+            >toDouble() : convierte de integer a double.
+
+        >los Type conversion son runtime methods, eso implica que no pueden usarse en "const", pero si en variables
+        o en "final". 
+    >Type Casting:
+        >Debido a que todo es un Object, esto implica una jerarquía de métodos que se esparcen en arboles de 
+        clases, subclases y superclases, es por esto que es posible, usando la keyword "as", declarar si es que 
+        se busca operar con una subclase de una con la cual estemos operando para poder utilizar métodos propios
+        de tales sub clases.
+        >Ejemplo:
+            > num someNumber = 3;
+            > print(someNumber.isEven); : Error, isEven es una propiedad de int, la cual no está definida en num
+            > final someInt = someNumber as int; 
+            > print(someNumber.isEven); : Ahora puede usarse la propiedad isEven.
+        >Si se castea un datatype no compatible con el datatype establecido, se arrojará un error. En otras 
+        palabras, se puede castear a una subclase hija, no a una hermana.
+            > Esto ocurre porque se trabaja con la runtime type de la variable.
+
+
+
+
+
+> Variables:
+    > La sintaxis básica es:
+        > (variable qualifier) (datatype) (variable name) = (value);
+            > Variable qualifier: Modificador de comportamiento de la variable:
+                > var: declaración de type inference.
+                > const: declaración de compile-time constant.
+                > final: declaración de runtime constant.
+        > Ejemplo: const int edad = 99;
