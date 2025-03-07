@@ -1,0 +1,11 @@
+>En Dart TODO es un objeto. Incluso si int, str, double o num parecen Primitive Datatypes, son objetos, lo que
+significa que pueden ser tratados como tal; es posible aplicarles directamente métodos.
+
+>El Type Safety hará que se genere un error si tratas de redefinir una variable si el datatype es erroneo.
+    >Si no quieres que el Type Safety se ponga en medio, siempre es posible usar el Datatype "dynamic", pero
+    esto no suele ser buena idea: "Friends don’t let friends use dynamic . Your life is too valuable for that."
+
+>Type Inference, similar a como funciona Py y JS, al hacer uso de la palabra "var", Dart es capaz de inferir
+el datatype correcto para esta situación, pero esto no excluye el Type Safety; si es asignado un datatype,
+este no puede ser alterado al intentar redefinir la variable.
+ 
