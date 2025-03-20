@@ -58,7 +58,9 @@ este no puede ser alterado al intentar redefinir la variable.
         >En Dart, para hacer un type conversion es necesario explicitarlo usando métodos de clase:
             >toInt() : convierte de double a integer, esto implica la pérdida de decimales.
             >toDouble() : convierte de integer a double.
-
+            >toString() : convierte el valor de una variable a String
+                >toStringAsFixed() : convierte un double String y limita la cantidad de decimales al argumento que se le pase
+                
         >los Type conversion son runtime methods, eso implica que no pueden usarse en "const", pero si en variables
         o en "final". 
     >Type Casting:
