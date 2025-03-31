@@ -25,7 +25,10 @@ void main() {
   // pudiendo manipular los Grapheme Clusters usando .characters
   // >>>>>> Unicode Extended Grapheme Cluster es lo que se entiende por multiples unicodes que dan por resultado
   // un solo simbolo 
+  print('f');
   print(family.characters.length); // Ahora el resultado es 1
+  print(family.characters); 
+  print('f');
   // Cabe destacar que es recomendable usar Grapheme Clusters cuando se reciba información desde el exterior.
   
   // Concatenación
