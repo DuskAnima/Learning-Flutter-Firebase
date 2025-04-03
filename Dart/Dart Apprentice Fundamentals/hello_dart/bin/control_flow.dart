@@ -10,7 +10,7 @@ void main(){
   print(alsoTrue);
   // Exercises
   // 1
-  const myAge = 100;
+  /* const myAge = 100;
   const isTeenager = myAge >= 13 && myAge <= 19;
   print('Is teeneager: $isTeenager'); 
   // 2
@@ -22,6 +22,17 @@ void main(){
   const String ray = 'Ray Wenderlich';
   const bool rayIsReader =  reader == ray;
   print('Ray is reader: $rayIsReader');
-  // The If Statement:
+  */
+  // Exercises 2
+  const myAge = 13;
+  print('Excercise 1');
+  if (myAge >= 14 && myAge <= 19) {
+    print('teenager');
+  } else {
+    print('no teeneager');
+  }
+  print('Excercise 1');
+  const answer = (myAge >= 13 && myAge <= 19) ? 'teeneager' : 'not teeneager';
+  print(answer);
   
 }
