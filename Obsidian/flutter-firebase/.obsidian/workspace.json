@@ -1,0 +1,218 @@
+{
+  "main": {
+    "id": "7385551f9d6c9607",
+    "type": "split",
+    "children": [
+      {
+        "id": "7abeaf9327c1b58e",
+        "type": "tabs",
+        "dimension": 43.839285714285715,
+        "children": [
+          {
+            "id": "6f2c28b4af385d00",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Clases.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Clases"
+            }
+          }
+        ]
+      },
+      {
+        "id": "f0b24b77db4a9120",
+        "type": "tabs",
+        "dimension": 56.160714285714285,
+        "children": [
+          {
+            "id": "f3b025f98912f3ce",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Control Flow.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Control Flow"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "107dd487d9550881",
+    "type": "split",
+    "children": [
+      {
+        "id": "6182a99eafe02300",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3426d0b7bdf7e6fd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "3e7a2d1517ee5ff6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "fba8fe8e41fee8a1",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 201.5
+  },
+  "right": {
+    "id": "1f3526f771110ace",
+    "type": "split",
+    "children": [
+      {
+        "id": "ba76eb5134bc4b95",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "25d2e6b8dfc793d5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Dart.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Dart"
+            }
+          },
+          {
+            "id": "ca27074ab83e7b74",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Dart.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Dart"
+            }
+          },
+          {
+            "id": "935b4ff8d75a948a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "9984891cdd24c189",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Dart.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Dart"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false
+    }
+  },
+  "active": "f3b025f98912f3ce",
+  "lastOpenFiles": [
+    "Clases.md",
+    "Datatype.md",
+    "Control Flow.md",
+    "Operators.md",
+    "Variables.md",
+    "Type Conversion.md",
+    "Type System.md",
+    "Dart.md",
+    "Packages.md",
+    "Functions.md",
+    "main().md",
+    "Type Checking en Runtime.md",
+    "Never.md",
+    "Object.md",
+    "[[Modificadores.md",
+    "[Modificadores.md",
+    "[Modificadores de variables.md",
+    "Modificadores.md",
+    "const.md",
+    "Type Inference.md",
+    "SDK Tools.md",
+    "Welcome.md"
+  ]
+}
