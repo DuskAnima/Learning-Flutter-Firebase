@@ -6,6 +6,7 @@
       {
         "id": "f0b24b77db4a9120",
         "type": "tabs",
+        "dimension": 52.71317829457365,
         "children": [
           {
             "id": "f3b025f98912f3ce",
@@ -26,6 +27,7 @@
       {
         "id": "a0ff66ba1f7b1382",
         "type": "tabs",
+        "dimension": 47.286821705426355,
         "children": [
           {
             "id": "75570d705e7846b8",
@@ -33,12 +35,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Datatype.md",
+                "file": "Dart.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Datatype"
+              "title": "Dart"
             }
           }
         ]
@@ -188,18 +190,18 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "f3b025f98912f3ce",
+  "active": "75570d705e7846b8",
   "lastOpenFiles": [
-    "Datatype.md",
     "Control Flow.md",
     "Dart.md",
     "Clases.md",
+    "Functions.md",
+    "Datatype.md",
     "Operators.md",
     "Variables.md",
     "Type Conversion.md",
     "Type System.md",
     "Packages.md",
-    "Functions.md",
     "main().md",
     "Type Checking en Runtime.md",
     "Never.md",
