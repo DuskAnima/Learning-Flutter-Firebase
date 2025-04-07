@@ -49,4 +49,10 @@
 - ``switch`` se basa en el establecimiento de casos de uso.
 	- Se declara una variable y, según los diferentes casos establecidos, se ejecutará el bloque de código que posea un caso compatible con la variable declarada.
 - las partes de un `switch` statement son las siguientes:
-	- la declaración `switch` pide una variable `int`, `string`, `enum`
+	- **`switch`** pide una variable `int`, `string` o `enum` o un una compile-time constant.
+	- **`case`** cada keyword `case` toma un valor compile-time constant y compara ese valor usando el operador ``==`` con la variable declarada previamente en `switch`.
+	- **`break`** esta keyword le dice a Dart que finalice el programa porque el bloque de código ha terminado.
+	- **`default`** si ninguno de los `case` se iguala con la variable de `switch`, el código bajo `default` se ejecuta.
+- Desde Dart 3 a este statement se le ha agregado un montón de profundidad.
+	- Puede ser buena idea estudiarlo más a profundidad en el futuro.
+	- El libro también recomienda buscar **refactoring switch statements with polymorphism** para evitar el sobre uso de esto mismo.

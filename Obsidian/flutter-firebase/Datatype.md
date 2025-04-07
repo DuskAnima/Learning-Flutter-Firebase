@@ -57,11 +57,14 @@
 - Puede almacenar uno de dos valores: ``true`` y ``false``.
 ###### ``enum``
 - Es un conjunto fijo de valores nombrados.
-	- Casos de uso comunes:
-		- Estados finitos: `EstadoUsuario {activo, inactivo, suspendido}`
-		- Opciones de configuración: `Tema {claro, oscuro, sistema}`
-		- Categorías fijas: `TipoProducto {libro, electronico, ropa}`
-		- Códigos de error: `ErrorAPI {noEncontrado, sinConexión, servidor}` 
+- Debe ser declarada afuera de main()
+	- Esto es porque ``enum`` en sí es reconocido por Dart como una clase.
+- Se utiliza para crear datatypes personalizados y limitados.
+- Casos de uso comunes:
+	- Estados finitos: `EstadoUsuario {activo, inactivo, suspendido}`
+	- Opciones de configuración: `Tema {claro, oscuro, sistema}`
+	- Categorías fijas: `TipoProducto {libro, electronico, ropa}`
+	- Códigos de error: `ErrorAPI {noEncontrado, sinConexión, servidor}` 
 - Sus valores son **compile-time constant**, por lo tanto deben estar definidas con antelación y no pueden mutar.
 	- Sus propiedades **sí** pueden ser inicializadas con valores calculados en runtime.
 - Su uso es ideal para trabajar con el statement ``switch`` para establecer las variables evaluadas.
@@ -69,6 +72,7 @@
 - Propiedades útiles:
 	- ``Tipo.valor.index``. para obtener el índice.
 	- `Tipo.valor.name`. para obtener el nombre del valor.
+	- si se hace un ``print`` a una variable con un valor de ``enum`` declarado, se imprimirá el valor.
 - De manera mas avanzada, permiten agregar **propiedades**, **constructores** y **métodos**.
 	- Todas las variables deben ser `final`.
 	- Los constructores deben ser ``const``.
@@ -77,8 +81,6 @@
 		- No puede ser instanciada con `new`.
 		- No tiene herencia, no puede extenderse ni ser extendida con `extends`
 		- Todas sus instancias son ``const``.
-
-
 ###### ``Never``
 - Es un tipo especial que se utiliza para representar valores que nunca se alcanzan. 
 ###### ``DateTime``
