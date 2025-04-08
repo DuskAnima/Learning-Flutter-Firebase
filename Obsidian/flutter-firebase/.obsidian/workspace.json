@@ -6,7 +6,6 @@
       {
         "id": "f0b24b77db4a9120",
         "type": "tabs",
-        "dimension": 52.71317829457365,
         "children": [
           {
             "id": "f3b025f98912f3ce",
@@ -27,7 +26,6 @@
       {
         "id": "a0ff66ba1f7b1382",
         "type": "tabs",
-        "dimension": 47.286821705426355,
         "children": [
           {
             "id": "75570d705e7846b8",
@@ -35,12 +33,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dart.md",
+                "file": "Datatype.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dart"
+              "title": "Datatype"
             }
           }
         ]
@@ -190,18 +188,19 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "75570d705e7846b8",
+  "active": "f3b025f98912f3ce",
   "lastOpenFiles": [
+    "Modificadores.md",
+    "Datatype.md",
     "Control Flow.md",
     "Dart.md",
     "Clases.md",
-    "Functions.md",
-    "Datatype.md",
     "Operators.md",
     "Variables.md",
     "Type Conversion.md",
     "Type System.md",
     "Packages.md",
+    "Functions.md",
     "main().md",
     "Type Checking en Runtime.md",
     "Never.md",
@@ -209,7 +208,6 @@
     "[[Modificadores.md",
     "[Modificadores.md",
     "[Modificadores de variables.md",
-    "Modificadores.md",
     "const.md",
     "Type Inference.md",
     "SDK Tools.md",
