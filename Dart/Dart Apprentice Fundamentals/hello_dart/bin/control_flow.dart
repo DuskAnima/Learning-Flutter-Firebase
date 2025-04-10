@@ -1,5 +1,5 @@
 enum Weather { sunny, snowy, cloudy, rainy }
-
+enum AudioState { playing, paused, stopped }
 void main() {
   // Probando igualdad
   const doesOneEqualTwo = (1 == 2);
@@ -65,7 +65,7 @@ void main() {
     case Weather.rainy:
       print('Bring an umbrella');
   }
-  // Challenge 1
+  // Challenge 1. Find the error
   const firstName = 'Bob';
   var lastName = '';
   if (firstName == 'Bob') {
@@ -75,4 +75,23 @@ void main() {
   }
   final fullName = '$firstName $lastName';
   print(fullName);
+  // Solución: lastName estaba declarado como const dentro de los if. 
+  //Se quitó los const y se declaró una variable en el exterior del flujo booleano.
+
+  // Challenge 2. Boolean challenge
+  print(true && true); // true
+  print(false || false); // false
+  print((true && 1 != 2) || (4 > 3 && 100 < 1)); // true
+  print(((10 / 2) > 3 ) && ((10 % 2) == 0)); // true
+
+  // Challenge 3. Audio enumerations
+  var audioState = AudioState.playing;
+  switch (audioState) {
+    case AudioState.playing:
+      print('Music playing');
+    case AudioState.paused:
+      print('Music paused');
+    case AudioState.stopped:
+      print('Music stopped.');
+  }
 }
