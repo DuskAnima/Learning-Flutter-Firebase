@@ -6,7 +6,9 @@
 - ``*`` Multiply
 - ``/`` Divide 
 	- Esta división siempre tendrá como resultado un double
-- ``**`` Power
+- ``pow()``
+	- Esta es una función del package [Math](Packages#Math) 
+	- se opera usando de argumentos (base, exponente)
 - ``~/`` Truncating Division 
 	- División que no redondea, tendrá como resultado un int
 - ``%`` Euclidean Modulo 

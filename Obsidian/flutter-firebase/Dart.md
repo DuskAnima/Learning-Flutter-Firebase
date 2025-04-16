@@ -74,13 +74,13 @@ En Dart **todo** es un objeto, incluso los Primitive Datatypes, lo que significa
 	- [Operator Precedence](Operators#Operator%20Precedence)
 		- Prioridad de lectura de operadores de comparación.
 #### [[Control Flow]]:
-- [if Statement](Control%20Flow#If%20Statement) 
+- [if Statement](Control%20Flow.md#If%20Statement) 
 	- Condicional.
-- [else Clause](Control%20Flow#Else%20Clause)
+- [else Clause](Control%20Flow.md#Else%20Clause)
 	- Resultado si todas las condicionales son `false`.
-- [else if Chains](Control%20Flow#Else%20If%20Chains)
+- [else if Chains](Control%20Flow.md#Else%20If%20Chains)
 	- Encadenamiento de condicionales 
-- [Ternary Conditional Operator](Control%20Flow#Ternary%20Conditional%20Operator)
+- [Ternary Conditional Operator](Control%20Flow.md#Ternary%20Conditional%20Operator)
 	- Expresión compacta de if else.
 #### [[Packages]]:
 - [Math](Packages#Math):

@@ -19,11 +19,18 @@ Proporciona operaciones extras para valores [num](Datatype#num) y sus derivados.
 import 'darth:math';
 ```
 - Math functions
-	- sin() seno
-	- cos() coseno
-	- sqrt() raíz cuadrada
-	- max(x, y) valor mayor entre 2 números
-	- min(x, y) valor menor entre 2 números
+	- sin() 
+		- seno
+	- cos() 
+		- coseno
+	- sqrt() 
+		- raíz cuadrada
+	- max(x, y) 
+		- valor mayor entre 2 números
+	- min(x, y) 
+		- valor menor entre 2 números
+	- pow(base, exponente)
+		- potencias. 
 - Constants
 	- pi
 - Expressions

@@ -1,3 +1,4 @@
+#### Conditionals
 ###### ``If`` Statement
 (Declaración if)
 >`if(<boolean condition>) {
@@ -56,3 +57,46 @@
 - Desde Dart 3 a este statement se le ha agregado un montón de profundidad.
 	- Puede ser buena idea estudiarlo más a profundidad en el futuro.
 	- El libro también recomienda buscar **refactoring switch statements with polymorphism** para evitar el sobre uso de esto mismo.
+
+
+#### Loops
+(Bucles)
+oops son el método principal para establecer procesos repetitivos activos.
+###### `While` Loops
+(Bucle while)
+>`while (<condition>) {`
+>	`//loop code`
+>`}`
+- El bucle hace una verificación de la condición en cada iteración.
+	- Si la condición es `true` entonces el bloque de código se ejecuta.
+	- Si la condición es `false` el bucle finaliza.
+###### ``Do-While`` Loops
+(Bucle Do While)
+>`do {`
+>	`//loop code`
+>`} while (<condition>)`
+- La verificación es al revés de un `while` loop. Primero se ejecuta el bloque de código, luego se verifica la condición.
+	- Si la condición es ``true`` se vuelve a ejecutar el código
+	- Si la condición es `false` el bucle finaliza.
+	- Esto implica que, a diferencia del `while` loop, `do-while` siempre se ejecuta al menos una vez. 
+###### `For` Loops
+(bucle for)
+>`for (<intialization>; <condition>; <actualization>) {`
+>	`//loop code`
+>`}`
+- Se utiliza para iterar un número especifico de veces establecido en la condición.
+- Ejemplo simple: `for (var i = 0; i < 5; i++)`
+	- Dentro del for se inicializa la variable de control con la que se va a iterar
+	- luego se establece la condición del bucle: 
+		- si es`true` el loop continua
+		- si es `false` el loop termina
+	- finalmente se establece de que manera la variable de control se actualizará. Se puede aplicar cualquier operación matemática.
+
+#### Keywords
+###### ``break;``
+- Se utiliza en `for`, `while`, `do-while` y `switch`
+- Sirve para terminar la ejecución del bloque de código **inmediatamente**.
+- es útil cuando la lógica determina que no hay necesidad de seguir con la iteración o cuando encuentra el resultado que buscaba.
+###### ``continue;``
+- Salta a la siguiente iteración del loop sin ejecutar el resto del código dentro del bloque.
+- Es útil cuando quieres omitir un bloque de código de una iteración, pero quieres que el resto de las iteraciones sigan ejecutándose. 
