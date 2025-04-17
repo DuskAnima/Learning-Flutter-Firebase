@@ -74,14 +74,32 @@ En Dart **todo** es un objeto, incluso los Primitive Datatypes, lo que significa
 	- [Operator Precedence](Operators#Operator%20Precedence)
 		- Prioridad de lectura de operadores de comparación.
 #### [[Control Flow]]:
-- [if Statement](Control%20Flow.md#If%20Statement) 
-	- Condicional.
-- [else Clause](Control%20Flow.md#Else%20Clause)
-	- Resultado si todas las condicionales son `false`.
-- [else if Chains](Control%20Flow.md#Else%20If%20Chains)
-	- Encadenamiento de condicionales 
-- [Ternary Conditional Operator](Control%20Flow.md#Ternary%20Conditional%20Operator)
-	- Expresión compacta de if else.
+- [Conditionals](Control%20Flow#Conditionals)
+	- [if Statement](Control%20Flow.md#If%20Statement) 
+		- Condicional simple.
+	- [else Clause](Control%20Flow.md#Else%20Clause)
+		- Resultado si todas las condicionales son `false`.
+	- [else if Chains](Control%20Flow.md#Else%20If%20Chains)
+		- Encadenamiento de condicionales 
+	- [Ternary Conditional Operator](Control%20Flow.md#Ternary%20Conditional%20Operator)
+		- Expresión compacta de if else.
+	- [Switch statement](Control%20Flow#Switch%20Statement)
+		- Cambia entre un bloque de código u otro en base a una variable.
+- [Loops](Control%20Flow#Loops)
+	- [While Loops](Control%20Flow#While%20Loops)
+		- Genera un loop bajo una condición concreta.
+	- [Do-While Loops](Control%20Flow#Do-While%20Loops)
+		- Ejecuta código, luego, si se cumple una condición, el código entra en loop.
+	- [For Loops](Control%20Flow#For%20Loops)
+		- Crea iteraciones en base a una condición establecida previamente.
+	- [Keywords](Control%20Flow#Keywords)
+		- [break;](Control%20Flow#break;)
+			- Detiene el código.
+		- [continue;](Control%20Flow#continue;)
+			- Salta la iteración y procede a la siguiente.
+
+#### [[Functions]]
+- 
 #### [[Packages]]:
 - [Math](Packages#Math):
 	- Funciones matemáticas, constantes, etc.
