@@ -91,6 +91,8 @@ oops son el método principal para establecer procesos repetitivos activos.
 		- si es`true` el loop continua
 		- si es `false` el loop termina
 	- finalmente se establece de que manera la variable de control se actualizará. Se puede aplicar cualquier operación matemática.
+- A diferencia de Python, Dart no posee la posibilidad de establecer el comportamiento tras un loop explícitamente usando else. 
+	- En el caso de Dart solo hay que escribir el comportamiento deseado fuera del nivel de anidamiento del bucle.
 
 #### Keywords
 ###### ``break;``

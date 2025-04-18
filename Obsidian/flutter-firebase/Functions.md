@@ -5,6 +5,7 @@ Las funciones son bloques de código que poseen un input y un output. Su princip
 (Tipo de retorno)
 - Se declara al comienzo, esto establece que [[Datatype]] tendrá el output de la función.
 	- Si la función no está pensada para que retorne nada, la función debe ser declarada con void.
+- El return type es opcional pero recomendado. Si no se incluye, Dart puede inferir desde el return declarado qué tipo de dato es. 
 ###### Function name 
 (Nombre de la función)
 - Puedes llamar las funciones casi como quieras.
@@ -25,6 +26,7 @@ Las funciones son bloques de código que poseen un input y un output. Su princip
 		- ``String myFunc(String myParameter, [String? myOptionalParameter])``
 		- recordar que "``datatype?``" al tener un ? hace que el tipo sea nulleable, o sea que admite null. 
 	- Es importante dejar los parámetros nulleables al final debido a la propiedad posicional de los argumentos. 
+- Declarar el datatype de un parámetro es opcional, pero se recomienda declararlo. Dart asumirá que el parámetro tiene datatype ``dynamic``.
 ###### Return value
 (Valor del retorno)
 - Este es el output de la función
@@ -99,3 +101,11 @@ Las funciones son bloques de código que poseen un input y un output. Su princip
 		- Por ejemplo `calculateFibonacci` o `parseJson`.
 - No es buena práctica repetir palabras en la función y en la declaración de sus parámetros.
 	- Por ejemplo en vez de `cubeNumber(int number)`, mejor `cube(int number)`.
+
+#### Arrow Functions
+(Funciones de flecha)
+- Es una sintaxis especial que permite expresar una función en una sola línea
+	- Esto sirve para proveer de legibilidad al código.
+	- Ejemplo `int add(int a, int b) => a + b;`
+- A esta forma de escribir funciones se le conoce como Arrow Syntax o Arrow Notation.
+- Esto **solo** se puede hacer si el cuerpo de la función posee una línea.
