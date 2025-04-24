@@ -99,6 +99,23 @@ En Dart **todo** es un objeto, incluso los Primitive Datatypes, lo que significa
 			- Salta la iteración y procede a la siguiente.
 
 #### [[Functions]]
+- [Partes de una función](Functions#Partes%20de%20una%20función)
+	- Return type
+	- Function name
+	- Parameter
+	- Return value
+	- Function signature
+	- Function body
+	- Function level
+- [Calling](Functions#Calling)
+- [Default Values](Functions#Default%20Values)
+- [Named Parameters](Functions#Named%20Parameters)
+- [Side Effects](Functions#Side%20Effects)
+- [main()](Functions#Main())
+- [Nombrando Funciones](Functions#Nombrando%20Funciones)
+- [Arrow Functions](Functions#Arrow%20Functions)
+
+#### [[Classes]]
 - 
 #### [[Packages]]:
 - [Math](Packages#Math):
@@ -108,6 +125,7 @@ En Dart **todo** es un objeto, incluso los Primitive Datatypes, lo que significa
 		- Soporte para **Unicode extended grapheme cluster**.
 		- Atributos
 			- ``.characters``
+
 
 
 

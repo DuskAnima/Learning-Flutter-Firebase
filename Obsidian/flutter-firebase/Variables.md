@@ -7,10 +7,14 @@ Existen 3 modificadores de variables (variable qualifier), los cuales tienen sus
 * El valor de la constante **debe** ser declarado en tiempo de compilación, antes de que el programa se ejecute.	
 * Esto le da libertad al compilador para hacer optimizaciones internas, como reemplazar las referencias a la constante directamente con su valor, lo que mejora el rendimiento.
 * Modificador de valor inmutable.
+* Si se utiliza para **instanciar una** [clase](Classes), tanto la referencia como el objeto se vuelven inmutables.
+	* Esto implica que, luego de creado el objeto, sus valores **no pueden ser alterados**.
 ###### ``final``
  * Se utiliza para declarar "**runtime constant**":
 *  El valor no se conoce durante el tiempo de compilado, se le es asignado durante la ejecución.
 * Una vez asignado no puede ser modificado. De intentarse, esto generaría error.
+* Si se utiliza para **instanciar una** [clase](Classes), la referencia es inmutable, pero el objeto sigue siendo mutable.
+	* Esto implica que, luego de creado el objeto, sus valores **sí pueden ser alterados**.
 ###### ``var`` 
 * Se utiliza para declarar variables.
 * El valor puede conocerse previamente o se puede asignar después.
