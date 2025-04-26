@@ -7,6 +7,7 @@
 		- ``toString()`` autodescripción del objeto.
 			- Si no se sobreescribe el método ``toString()``, Dart devuelve una representación predeterminada que incluye el tipo de objeto y su dirección de memoria.
 			- En clases personalizadas, es común sobreescribir ``toString()`` para que retorne representaciones útiles y comprensibles del objeto.
+				- Si se modifica, una buena práctica es determinarla al final de toda la lista de métodos para mejorar la legibilidad.
 		- ``hashCode`` valor entero hash.
 			- Es un valor único asociado a un objeto que se utiliza para operaciones como búsquedas en colecciones (por ejemplo, al agregar o buscar objetos en un `Set` o como claves en un `Map`).
 - ``Object?`` indica que la variable puede ser cualquier objeto, incluso ``Null``

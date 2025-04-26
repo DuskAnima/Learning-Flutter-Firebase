@@ -40,7 +40,7 @@ import 'darth:math';
 		- sin(45 * pi / 180)
 			- Convertir 45° a radianes
 #### Characters
-(caracteres)
+(Caracteres)
 ```
 pubspec.yaml > characters: ^1.2.1
 
@@ -52,5 +52,6 @@ Esta librería agrega funcionalidad extra a los [Strings](Datatype#String) y da 
 	- ``myEmojiString.characters.length``
 		- Retorna la cantidad exacta de emojis. 
 	- "Es recomendable usar Grapheme Clusters cuando se reciba información desde el exterior." - Dart Apprentice Fundamentals.
-
-
+#### Convert
+(Convertir)
+Es una librería creada para serializar y deserializar **JSON maps** 
