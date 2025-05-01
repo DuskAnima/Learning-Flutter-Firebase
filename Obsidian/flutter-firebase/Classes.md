@@ -1,5 +1,5 @@
 
-#### Objetos
+#### Objects
 - Un objeto es el valor que se crea en base a una clase.
 	- Otro nombre para esto es **instancia**.
 		- Entonces al proceso para crear una clase se le suele denominar **instanciar una clase**.
@@ -25,6 +25,7 @@ final myObjectVariable = myObject()
 	..id = 42;
 ```
 #### Methods
+Los métodos son funciones pero creadas dentro de un objeto, las cuales se operan con los argumentos entregados a la misma instancia de clase.
 ###### Object Serialization
 - Los archivos, base de datos y networks solo saben manejar tipos de datos simples, como String o números, no tipos de datos más complejos. Para poder lidiar con este problema se utiliza la **serialización**. 
 - La serialización es el proceso por el cual se convierte un objeto de datos complejos en formas almacenables y/o transmisibles. 
@@ -48,3 +49,38 @@ final myObjectVariable = myObject()
 	- Esto implica que, si en la otra variable se cambia alguna propiedad, esto afectará a ambas variables porque ambas apuntan a la misma referencia.
 
 #### Encapsulation
+La encapsulación es el principio de esconder información y lógica interna dentro de una clase. Esta información se vuelve privada para cualquier elemento fuera de la librería. En otras palabras, si se intenta acceder a la información **fuera del archivo en el que fue definido el elemento** este dará error. Cabe destacar que se puede seguir accediendo a él dentro del archivo con plena normalidad.
+- Ventajas de la encapsulación:
+	- La clase controla la información, incluyendo quien puede verla y como se modifica.
+	- El control aislado implica que es más sencillo de manipular y razonar.
+	- Información oculta implica mejor privacidad.
+	- Evita que otras clases no relacionadas alcancen y modifiquen los datos, cosa que puede generar bugs difíciles de encontrar.
+	- Siempre puedes cambiar variables internas, nombres y lógica sin romper cosas en el exterior de la clase.
+- Esconder componentes internos:
+	- Para hacer variables privadas se debe anteponer un guion bajo.
+		- `final _myVar = 1`
+		- Al ser privado, se vuelve inaccesible, para poder usar el elemento afuera de una clase se deben agregar **getters**
+###### Getters
+- Un getter es un método especial que retorna un campo privado.
+	- Es tan simple como hacer una función que retorne la información requerida.
+	- Como convención usual, los getters suelen usar el prefijo get, pero Dart posee una **keyword** especial para esta situación. 
+		- `String get myVar => _myVar;`
+		- Este método tiene la facilidad de que para extraer el dato correspondiente solo es necesario invocar el nombre del atributo. 
+			- `final myGetter = myInstance.myVar;`
+			- Esto hace que el getter se vea, de cara al usuario, como una propiedad normal, ya que no hay necesidad de invocarlo como una función.  
+	- También está la posibilidad de codificar en el getter un cálculo generado cada vez que sea invocado.
+		- Esto puede ser útil, por ejemplo, si es que no se quiere que se retorne información sensible, creando un calculo que ofusque la contraseña. 
+			- (Un ejemplo simple es operar  ``_password.length * '*' `` para retornar un string de asteriscos en función al largo de una contraseña)
+- Un getter **solo** sirve para extraer información, no para modificarla. Al hacer un valor privado, es imposible usar el asignador de dot notation.
+###### Setters
+- Para cambiar los datos privados internos se utilizan setters. Dart también posee una **keyword** para crearlos. 
+	- La keyword es `set`
+		- `set myVar(String text) => _myVar = text;`
+		- En este caso es notable que el datatype del método se define con `set` y el argumento que se le proporciona es el valor que se asignará en el parámetro.
+	- Un posible uso de un setter podría ser para poder establecer una contraseña. 
+		- Es posible establecer lógica para comprobar la validez de la misma contraseña.
+
+**No hay necesidad de abusar de los getters y setters si su uso no está justificado**
+- Por ejemplo, un Email podría usar un atributo público sin problemas. 
+	- Si buscas tener un getter pero no un setter, es tan simple como establecer el variable qualifier del atributo como final, el atributo será inmodificable. 
+- Si se usan atributos públicos, los setters y getters se crean implícitamente y se acceden con dot notation como fue expuesto anteriormente.
