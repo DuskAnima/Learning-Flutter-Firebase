@@ -1,6 +1,6 @@
 Los constructores son métodos built-in que crean o *construyen* instancias de una clase. 
 - Básicamente los constructores construyen nuevos objetos.
-- Los constructores tienen los mismos nombres que las clases de las cuales derivan.
+- Los constructores que tienen los mismos nombres que las clases de las cuales derivan se llaman **Unnamed Constructors**.
 	- También el type return del método constructor implícitamente es del mismo tipo que la clase de la cual deriva.
 
 #### Default Constructor
@@ -22,17 +22,18 @@ class Address {
 	- Esto es similar a como se construye una función.
 - Como en el ejemplo anterior, el constructor deberá ser el mismo que el de la clase. Este tipo de constructor es llamado **generative constructor** porque directamente genera un objeto del mismo tipo.
 - Existen 2 tipos de Custom Constructor: Long-form y Short-form.
-- Para establecer las propiedades de un objeto se utiliza la keyword **this**
-	- **this** implica una referencia a la propiedad del objeto mismo al momento de referenciarse.
+- Para establecer las propiedades de un objeto se utiliza la keyword ``this``
+	- La convención en Dart es poner el constructor antes de las variables de propiedades. 
+	- ``this`` implica una referencia a la propiedad del objeto mismo al momento de referenciarse.
 	- Se debe utilizar dot notation:
 		- ``this.property = parameter``
 			- Llamar a la propiedad del objeto igual que al parámetro constructor no es obligatorio pero ayuda a la legibilidad. 
 				- Hacer esto se llama **shadowing**.
 	- Con ``this`` se hace referencia a **la propiedad del objeto**
 	- Sin ``this`` se hace referencia al parámetro del constructor.  
-
+- Al establecer los constructores no hay necesidad de inicializar las variables con valores por defecto, ya que el constructor ya inicializa las variables.
+	- De todas formas, también es importante manejar la **nullability**.
 ###### Long-Form Constructor 
-La convención en Dart es poner el constructor antes de las variables de propiedades. 
 ```
 class User {
 	User(int id, String name) {
@@ -44,4 +45,30 @@ class User {
 	//...
 }
 ```
- 
+###### Short-Form Constructor
+- En vez de darle un body al constructor, se listan las propiedades que quieres inicializar, prefijadas con la keyword `this`. 
+	- De esta manera los mismos argumentos enviados al constructor se utilizan para inicializar las propiedades del objeto. 
+- Dart infiere los datatypes desde los parámetros establecidos en el class body.
+```
+class User {
+	User(this.id, this.name);
+	int id = 0;
+	String name = '';
+	//...
+}
+```
+#### Named Constructors
+- Este constructor se separa de los **unnamed constructors** por tener un identificador que le asigna un nombre.
+	- El identificador debe ser asignado con dot notation justo después de declarar el nombre default del constructor.
+		- `ClassName.identifierName()`
+	- Un ejemplo de uso sería cuando quieres manejar casos excepcionales, como cuando tienes a un usuario anónimo con valores por defecto. 
+```
+class User {
+	User.annonymous(){
+		int id = 0;
+		String name = 'anonymous';
+	}
+	//... 
+}
+```
+nota: En este caso como no hay parámetros o variables locales con el nombre id y nombre, no hay necesidad de usar `this`.

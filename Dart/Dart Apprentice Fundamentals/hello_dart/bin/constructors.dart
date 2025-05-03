@@ -13,10 +13,7 @@ class Address {
 // Custom Constructor
 
 class User {
-  User(int id, String name){
-    this.id = id;
-    this.name = name;
-  }
+  User(this.id, this.name);
   int id = 0;
   String name = '';
 
@@ -28,4 +25,6 @@ class User {
     return 'User(id: $id, name: $name)';
   }
 }
+
+// Named Constructor
 
