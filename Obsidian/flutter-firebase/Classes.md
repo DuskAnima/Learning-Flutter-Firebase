@@ -84,3 +84,6 @@ La encapsulación es el principio de esconder información y lógica interna den
 - Por ejemplo, un Email podría usar un atributo público sin problemas. 
 	- Si buscas tener un getter pero no un setter, es tan simple como establecer el variable qualifier del atributo como final, el atributo será inmodificable. 
 - Si se usan atributos públicos, los setters y getters se crean implícitamente y se acceden con dot notation como fue expuesto anteriormente.
+
+#### Conceptos Clave
+Un elemento fundamental en el uso de clases son los [[Constructors]].
