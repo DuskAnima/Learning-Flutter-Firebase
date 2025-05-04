@@ -3,7 +3,7 @@ Las funciones son bloques de código que poseen un input y un output. Su princip
 #### Partes de una función:
 ###### Return type
 (Tipo de retorno)
-- Se declara al comienzo, esto establece que [[Datatype]] tendrá el output de la función.
+- Se declara al comienzo, esto establece que datatype tendrá el output de la función.
 	- Si la función no está pensada para que retorne nada, la función debe ser declarada con void.
 - El return type es opcional pero recomendado. Si no se incluye, Dart puede inferir desde el return declarado qué tipo de dato es. 
 ###### Function name 

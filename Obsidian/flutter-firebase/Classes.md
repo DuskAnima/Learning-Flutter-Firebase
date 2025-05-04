@@ -62,7 +62,7 @@ La encapsulación es el principio de esconder información y lógica interna den
 		- Al ser privado, se vuelve inaccesible, para poder usar el elemento afuera de una clase se deben agregar **getters**
 ###### Getters
 - Un getter es un método especial que retorna un campo privado.
-	- Es tan simple como hacer una función que retorne la información requerida.
+	- Es tan simple como hacer una |función que retorne la información requerida.
 	- Como convención usual, los getters suelen usar el prefijo get, pero Dart posee una **keyword** especial para esta situación. 
 		- `String get myVar => _myVar;`
 		- Este método tiene la facilidad de que para extraer el dato correspondiente solo es necesario invocar el nombre del atributo. 

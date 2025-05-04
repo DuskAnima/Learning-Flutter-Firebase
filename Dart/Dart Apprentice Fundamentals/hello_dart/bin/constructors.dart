@@ -1,30 +1,10 @@
+import 'package:hello_dart/user.dart';
+
 void main(){
-final user = User(42, 'Ray');
+final user = User(id: 42, name: 'Ray');
+final anonymousUser = User.anonymous();
 print(user);
+print(anonymousUser);
 }
 
-// Default Constructor
-
-class Address {
-  Address();  // El uso de esta linea es opcional para esta clase de constructores
-  var value = '';
-}
-
-// Custom Constructor
-
-class User {
-  User(this.id, this.name);
-  int id = 0;
-  String name = '';
-
-  String toJson() {
-    return '"{id":$id, "name":$name}';
-  }
-  @override
-  String toString() {
-    return 'User(id: $id, name: $name)';
-  }
-}
-
-// Named Constructor
 

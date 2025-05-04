@@ -64,6 +64,7 @@ class User {
 	- Un ejemplo de uso sería cuando quieres manejar casos excepcionales, como cuando tienes a un usuario anónimo con valores por defecto. 
 ```
 class User {
+	User(this.id, this.name)
 	User.annonymous(){
 		int id = 0;
 		String name = 'anonymous';
@@ -72,3 +73,42 @@ class User {
 }
 ```
 nota: En este caso como no hay parámetros o variables locales con el nombre id y nombre, no hay necesidad de usar `this`.
+#### Forwarding Constructors 
+- En el contexto de los constructores, **forwarding** implica delegar la tarea de inicializar un objeto a otro constructor de la misma clase.
+	- Esto significa que el constructor `User.anonymous()` no define la lógica de inicialización de los campos `id` y `name` directamente. En cambio, delega esa responsabilidad al constructor principal `User(this.id, this.name)`, pasando valores predeterminados (`0` y `'anonymous'`).
+	- Esto es una forma de facilitar la legibilidad y editabilidad de las clases con constructores nombrados.
+```
+class User {
+	User(this.id, this.name)
+	User.annonymous() : this(0, 'anonymous');
+	int id = 0;
+	String name = 'anonymous';
+	}
+	//...
+}
+```
+#### Optional and Named Parameters
+Todo lo aprendido sobre parámetros opcionales y nombrados en [funciones](Functions#Named%20Parameters) también aplica en los métodos constructores.
+- Es posible establecer parámetros opcionales usando corchetes []
+	- `MyClass([this.myProperty]);`.
+- Se pueden establecer opcionales y nombradas usando llaves {}
+	- `MyClass({this.myProperty});`.
+- O pueden ser opcionales y requeridas usando llaves {} y la keyword `required`.
+	- `MyClas({required this.myProperty});`
+
+#### Initializer List
+- El initializer list, en este contexto, es una lista de variables que se colocan luego de dos puntos `:` establecidos después del método constructor.
+- Es una forma para poder crear parámetros nombrados que, a su vez, se les permita ser privados.
+	- Esto permite que, externamente los parámetros tienen un nombre público mientras internamente estás utilizando variables privadas.
+``` 
+class User {
+	User({int id = 0, String name = 'anonymous'}) 
+	:   _id = id
+		_name = name;
+}
+```
+No olvidar que hacer una variable privada solo hace que no se pueda acceder a ella a nivel de librería, pero, si se está operando localmente en el mismo archivo, la variable sigue siendo susceptible a cambios.
+#### Constant Constructors
+
+#### Información complementaria
+- Aunque la palabra "[forwarding](#Forwarding%20Constructors)" en esta sección se utilizó para hablar de constructores, generalmente se asocia con la delegación de [métodos](Classes#Methods) (como el caso de llamar a un método de otro objeto).
